@@ -14,6 +14,13 @@ var MOCKED_MOVIES_DATA = [
 ];
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      movies: null,
+    };
+  }
+
   render() {
     var movie = MOCKED_MOVIES_DATA[0];
     return (
