@@ -19,7 +19,10 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Text>{movie.title}</Text>
         <Text>{movie.year}</Text>
-        <Image source={{url: movie.posters.thumbnail}} />
+        <Image
+          source={{uri: movie.posters.thumbnail}}
+          style={styles.thumbnail}
+        />
       </View>
     );
   }
@@ -31,5 +34,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  thumbnail: {
+    width: 53,
+    height: 81,
   },
 });
