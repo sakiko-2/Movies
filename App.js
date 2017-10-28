@@ -21,6 +21,21 @@ export default class App extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData() {
+    fetch(REQUEST_URL)
+      .then((response) => response.json())
+      .then((responseData) => {
+        this.setState({
+          movies: responseData.movies,
+        });
+      })
+      .done();
+  }
+
   render() {
     var movie = MOCKED_MOVIES_DATA[0];
     return (
