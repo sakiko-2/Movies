@@ -14,11 +14,12 @@ var MOCKED_MOVIES_DATA = [
 
 export default class App extends React.Component {
   render() {
+    var movie = MOCKED_MOVIES_DATA[0];
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <Text>{movie.title}</Text>
+        <Text>{movie.year}</Text>
+        <Image source={{url: movie.posters.thumbnail}} />
       </View>
     );
   }
