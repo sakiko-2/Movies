@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   AppRegistry,
-  Component,
   Image,
   ListView,
   StyleSheet,
@@ -102,4 +101,8 @@ const styles = StyleSheet.create({
     width: 53,
     height: 81,
   },
+  listView: {
+    paddingTop: 20,
+    backgroundColor: '#fff',
+  }
 });
